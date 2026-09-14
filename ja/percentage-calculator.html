@@ -207,6 +207,24 @@
   }
   </script>
   
+  <!-- Structured Data JSON-LD (FinancialProduct) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FinancialProduct",
+    "name": "高機能パーセント計算機 (増減率・割合・割引率の逆算)",
+    "url": "https://numcalc.globalcorehub.com/ja/percentage-calculator",
+    "description": "パーセントの増加・減少率、全体に対する割合、割引後の元値逆算などを瞬時に計算。計算過程も視覚化。",
+    "feesAndCommissionsSpecification": "Free, Zero Fees, 100% Client-Side",
+    "provider": {
+      "@type": "Organization",
+      "name": "NumCalc Suite",
+      "url": "https://numcalc.globalcorehub.com"
+    }
+  }
+  </script>
+  
+  
   <!-- BreadcrumbList Schema.org JSON-LD -->
   <script type="application/ld+json">
   {
@@ -638,7 +656,7 @@
           </div>
           <div>
             <h3 class="text-base font-bold mb-4">計算式・数学モデル & よくある質問</h3>
-            <div class="space-y-3"><div class='p-4 rounded-xl border border-[#e2e8f0] dark:border-[#334155] hover:border-[#2563eb] bg-white/5'><h4 class='font-bold text-sm mb-1.5'>How is percentage change calculated?</h4><p class='text-xs opacity-75 leading-relaxed'>Percentage change is calculated using the formula: ((New - Old) / Old) * 100.</p></div><div class='p-4 rounded-xl border border-[#e2e8f0] dark:border-[#334155] hover:border-[#2563eb] bg-white/5'><h4 class='font-bold text-sm mb-1.5'>What happens if the starting value is zero?</h4><p class='text-xs opacity-75 leading-relaxed'>Percentage change from zero is mathematically undefined, so the calculator reports a clear indicator.</p></div><div class='p-4 rounded-xl border border-[#e2e8f0] dark:border-[#334155] hover:border-[#2563eb] bg-white/5'><h4 class='font-bold text-sm mb-1.5'>Can I calculate negative percentage decreases?</h4><p class='text-xs opacity-75 leading-relaxed'>Yes, negative percentage changes automatically display with a minus sign and appropriate styling.</p></div></div>
+            <div class="space-y-3"><div class='p-4 rounded-xl border border-[#e2e8f0] dark:border-[#334155] hover:border-[#2563eb] bg-white/5'><h4 class='font-bold text-sm mb-1.5'>増減率（パーセント変化）はどのように計算されますか？</h4><p class='text-xs opacity-75 leading-relaxed'>増減率は標準公式「((新値 - 旧値) / 旧値) * 100」を用いて算出されます。</p></div><div class='p-4 rounded-xl border border-[#e2e8f0] dark:border-[#334155] hover:border-[#2563eb] bg-white/5'><h4 class='font-bold text-sm mb-1.5'>元の数値がゼロの場合はどうなりますか？</h4><p class='text-xs opacity-75 leading-relaxed'>ゼロからの変化率は数学的に未定義であるため、計算機上にエラーインジケーターが明示されます。</p></div><div class='p-4 rounded-xl border border-[#e2e8f0] dark:border-[#334155] hover:border-[#2563eb] bg-white/5'><h4 class='font-bold text-sm mb-1.5'>マイナスの減少率も計算できますか？</h4><p class='text-xs opacity-75 leading-relaxed'>はい、減少した場合は自動的にマイナス符号が付与され、視覚的に分かりやすく表示されます。</p></div></div>
           </div>
         </div>
         </div></div>
@@ -714,28 +732,226 @@
     </div>
   </section>
 
-  <!-- Footer -->
-  <footer class="border-t border-[#e7e5e4] dark:border-[#334155] py-8 text-center text-xs opacity-75">
-    <div class="max-w-7xl mx-auto px-4 flex flex-col md:flex-row items-center justify-between gap-4">
-      <div class="text-left space-y-1">
+  <!-- Global Multi-Language Matrix -->
+  <section class="border-t border-[#e7e5e4] dark:border-[#334155] py-10 px-4 sm:px-6 lg:px-8 opacity-95 bg-black/[0.02] dark:bg-white/[0.02]">
+    <div class="max-w-7xl mx-auto">
+      <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 mb-6">
+        <div>
+          <h3 class="text-sm font-bold uppercase tracking-wider opacity-85 font-mono flex items-center gap-2">
+            <span>🌐</span> <span>グローバル多言語ネットワーク</span>
+          </h3>
+          <p class="text-xs opacity-60 mt-0.5 font-mono">
+            7大グローバル言語 · 49 本地化エンドポイント · 100% クライアント完結
+          </p>
+        </div>
+        <span class="text-xs font-mono opacity-50">[JA] 日本語 (ja)</span>
+      </div>
+
+      <div class="grid grid-cols-2 sm:grid-cols-4 md:grid-cols-7 gap-2.5">
+        
+        <a href="/percentage-calculator" class="p-3 rounded-xl border border-[#e2e8f0] dark:border-[#334155] hover:border-[#2563eb] bg-white dark:bg-[#1e293b] hover:border-[#10b981] transition group flex flex-col justify-between text-center ">
+          <div class="text-xl mb-1">[EN]</div>
+          <div class="text-xs font-bold truncate group-hover:underline">English</div>
+          <div class="text-[10px] opacity-50 font-mono mt-1">6 全ツール一覧</div>
+        </a>
+        
+        <a href="/zh/percentage-calculator" class="p-3 rounded-xl border border-[#e2e8f0] dark:border-[#334155] hover:border-[#2563eb] bg-white dark:bg-[#1e293b] hover:border-[#10b981] transition group flex flex-col justify-between text-center ">
+          <div class="text-xl mb-1">[ZH]</div>
+          <div class="text-xs font-bold truncate group-hover:underline">简体中文</div>
+          <div class="text-[10px] opacity-50 font-mono mt-1">6 全ツール一覧</div>
+        </a>
+        
+        <a href="/es/percentage-calculator" class="p-3 rounded-xl border border-[#e2e8f0] dark:border-[#334155] hover:border-[#2563eb] bg-white dark:bg-[#1e293b] hover:border-[#10b981] transition group flex flex-col justify-between text-center ">
+          <div class="text-xl mb-1">[ES]</div>
+          <div class="text-xs font-bold truncate group-hover:underline">Español</div>
+          <div class="text-[10px] opacity-50 font-mono mt-1">6 全ツール一覧</div>
+        </a>
+        
+        <a href="/pt/percentage-calculator" class="p-3 rounded-xl border border-[#e2e8f0] dark:border-[#334155] hover:border-[#2563eb] bg-white dark:bg-[#1e293b] hover:border-[#10b981] transition group flex flex-col justify-between text-center ">
+          <div class="text-xl mb-1">[PT]</div>
+          <div class="text-xs font-bold truncate group-hover:underline">Português</div>
+          <div class="text-[10px] opacity-50 font-mono mt-1">6 全ツール一覧</div>
+        </a>
+        
+        <a href="/de/percentage-calculator" class="p-3 rounded-xl border border-[#e2e8f0] dark:border-[#334155] hover:border-[#2563eb] bg-white dark:bg-[#1e293b] hover:border-[#10b981] transition group flex flex-col justify-between text-center ">
+          <div class="text-xl mb-1">[DE]</div>
+          <div class="text-xs font-bold truncate group-hover:underline">Deutsch</div>
+          <div class="text-[10px] opacity-50 font-mono mt-1">6 全ツール一覧</div>
+        </a>
+        
+        <a href="/fr/percentage-calculator" class="p-3 rounded-xl border border-[#e2e8f0] dark:border-[#334155] hover:border-[#2563eb] bg-white dark:bg-[#1e293b] hover:border-[#10b981] transition group flex flex-col justify-between text-center ">
+          <div class="text-xl mb-1">[FR]</div>
+          <div class="text-xs font-bold truncate group-hover:underline">Français</div>
+          <div class="text-[10px] opacity-50 font-mono mt-1">6 全ツール一覧</div>
+        </a>
+        
+        <a href="/ja/percentage-calculator" class="p-3 rounded-xl border border-[#e2e8f0] dark:border-[#334155] hover:border-[#2563eb] bg-white dark:bg-[#1e293b] hover:border-[#10b981] transition group flex flex-col justify-between text-center ring-2 ring-[#10b981]/50">
+          <div class="text-xl mb-1">[JA]</div>
+          <div class="text-xs font-bold truncate group-hover:underline">日本語</div>
+          <div class="text-[10px] opacity-50 font-mono mt-1">6 全ツール一覧</div>
+        </a>
+        
+      </div>
+    </div>
+  </section>
+
+  <!-- Comprehensive Multi-Column Footer -->
+  <footer class="border-t border-[#e7e5e4] dark:border-[#334155] pt-12 pb-8 text-xs opacity-90">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <!-- Prominent Medical / Financial Compliance Disclaimer Banner -->
+      <div class="mb-10 p-4 rounded-2xl border border-amber-500/30 bg-amber-500/10 text-amber-700 dark:text-amber-400 font-mono flex items-start space-x-3 text-left">
+        <span class="text-lg leading-none mt-0.5">⚠️</span>
+        <div class="leading-relaxed">
+          <strong class="font-bold block mb-0.5 text-xs">重要なお知らせ・免責事項</strong>
+          <span class="text-[11px] opacity-90">計算結果は情報提供のみを目的としており、専門的な財務・投資助言を構成するものではありません。</span>
+        </div>
+      </div>
+      
+
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-12">
+        <!-- Col 1: Brand & Architecture -->
+        <div class="space-y-3">
+          <div class="text-sm font-bold tracking-tight">
+            NumCalc Suite
+          </div>
+          <p class="text-[11px] opacity-70 leading-relaxed max-w-xs">
+            パーセントの増加・減少率、全体に対する割合、割引後の元値逆算などを瞬時に計算。計算過程も視覚化。
+          </p>
+          <div class="p-2.5 rounded-xl border border-[#e2e8f0] dark:border-[#334155] hover:border-[#2563eb] bg-white/5 font-mono text-[11px] text-[#10b981]">
+            🔒 100% ブラウザ内ローカル処理：サーバー保存ゼロ、データ送信ゼロで完全なプライバシーを保護。
+          </div>
+        </div>
+
+        <!-- Col 2: Top Tools Navigation -->
+        <div>
+          <h4 class="text-xs font-bold uppercase font-mono tracking-wider opacity-80 mb-3">
+            ツール＆ディレクトリ
+          </h4>
+          <ul class="space-y-2 font-mono text-[11px]">
+            
+            <li>
+              <a href="/ja/unit-converter" class="opacity-70 hover:opacity-100 hover:underline transition truncate block">
+                &rarr; 単位換算
+              </a>
+            </li>
+            
+            <li>
+              <a href="/ja/percentage-calculator" class="opacity-70 hover:opacity-100 hover:underline transition truncate block">
+                &rarr; パーセント計算
+              </a>
+            </li>
+            
+            <li>
+              <a href="/ja/compound-interest-calculator" class="opacity-70 hover:opacity-100 hover:underline transition truncate block">
+                &rarr; 複利計算
+              </a>
+            </li>
+            
+            <li>
+              <a href="/ja/loan-mortgage-calculator" class="opacity-70 hover:opacity-100 hover:underline transition truncate block">
+                &rarr; ローン返済計算
+              </a>
+            </li>
+            
+            <li>
+              <a href="/ja/aspect-ratio-calculator" class="opacity-70 hover:opacity-100 hover:underline transition truncate block">
+                &rarr; アスペクト比
+              </a>
+            </li>
+            
+          </ul>
+        </div>
+
+        <!-- Col 3: Global Languages Hub -->
+        <div>
+          <h4 class="text-xs font-bold uppercase font-mono tracking-wider opacity-80 mb-3">
+            グローバル多言語ネットワーク
+          </h4>
+          <div class="grid grid-cols-2 gap-1.5 font-mono text-[11px]">
+            
+            <a href="/percentage-calculator" class="opacity-70 hover:opacity-100 hover:underline transition flex items-center gap-1.5 py-0.5">
+              <span>[EN]</span>
+              <span>English</span>
+            </a>
+            
+            <a href="/zh/percentage-calculator" class="opacity-70 hover:opacity-100 hover:underline transition flex items-center gap-1.5 py-0.5">
+              <span>[ZH]</span>
+              <span>简体中文</span>
+            </a>
+            
+            <a href="/es/percentage-calculator" class="opacity-70 hover:opacity-100 hover:underline transition flex items-center gap-1.5 py-0.5">
+              <span>[ES]</span>
+              <span>Español</span>
+            </a>
+            
+            <a href="/pt/percentage-calculator" class="opacity-70 hover:opacity-100 hover:underline transition flex items-center gap-1.5 py-0.5">
+              <span>[PT]</span>
+              <span>Português</span>
+            </a>
+            
+            <a href="/de/percentage-calculator" class="opacity-70 hover:opacity-100 hover:underline transition flex items-center gap-1.5 py-0.5">
+              <span>[DE]</span>
+              <span>Deutsch</span>
+            </a>
+            
+            <a href="/fr/percentage-calculator" class="opacity-70 hover:opacity-100 hover:underline transition flex items-center gap-1.5 py-0.5">
+              <span>[FR]</span>
+              <span>Français</span>
+            </a>
+            
+            <a href="/ja/percentage-calculator" class="opacity-70 hover:opacity-100 hover:underline transition flex items-center gap-1.5 py-0.5">
+              <span>[JA]</span>
+              <span>日本語</span>
+            </a>
+            
+          </div>
+        </div>
+
+        <!-- Col 4: Crawlers & Legal Standards -->
+        <div>
+          <h4 class="text-xs font-bold uppercase font-mono tracking-wider opacity-80 mb-3">
+            規約とクローラー
+          </h4>
+          <ul class="space-y-2 font-mono text-[11px]">
+            <li>
+              <a href="/sitemap.xml" class="opacity-70 hover:opacity-100 hover:underline transition flex items-center gap-1">
+                <span>📄</span> <span>sitemap.xml</span>
+              </a>
+            </li>
+            <li>
+              <a href="/robots.txt" class="opacity-70 hover:opacity-100 hover:underline transition flex items-center gap-1">
+                <span>🤖</span> <span>robots.txt</span>
+              </a>
+            </li>
+            <li>
+              <a href="https://globalcorehub.com" target="_blank" rel="noopener noreferrer" class="opacity-70 hover:opacity-100 hover:underline transition flex items-center gap-1">
+                <span>🌐</span> <span>globalcorehub.com</span>
+              </a>
+            </li>
+            <li class="pt-1 text-[10px] opacity-50 font-mono">
+              ⚡ Cloudflare エッジ · 0ms コールドスタート
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Bottom Bar -->
+      <div class="border-t border-[#e7e5e4] dark:border-[#334155] pt-6 flex flex-col sm:flex-row items-center justify-between gap-3 text-[11px] opacity-60 font-mono">
         <div>
           &copy; 2026 <strong>NumCalc Suite</strong>. 完全ブラウザ内ローカル処理 · Cloudflare グローバルエッジ高速配信。
         </div>
-        <div class="text-[11px] opacity-60 font-mono">
-          🔒 100% ブラウザ内ローカル処理：サーバー保存ゼロ、データ送信ゼロで完全なプライバシーを保護。
-           · ⚠️ 計算結果は情報提供のみを目的としており、専門的な財務・投資助言を構成するものではありません。
+        <div class="flex items-center space-x-3">
+          <span>100% ブラウザ内クライアント実行</span>
+          <span>&bull;</span>
+          <span>v2.0 アーキテクチャ</span>
         </div>
-      </div>
-      <div class="flex space-x-4 font-mono text-[11px]">
-        <a href="/sitemap.xml" class="hover:underline">sitemap.xml</a>
-        <a href="/robots.txt" class="hover:underline">robots.txt</a>
-        <a href="https://globalcorehub.com" target="_blank" class="hover:underline">globalcorehub</a>
       </div>
     </div>
   </footer>
 
   <!-- Floating Back to Top Button -->
-  <button id="back-to-top-btn" type="button" class="fixed bottom-6 right-6 p-2.5 rounded-full bg-white dark:bg-[#1e293b] border border-[#e2e8f0] dark:border-[#334155] hover:border-[#2563eb] shadow-xl opacity-0 pointer-events-none transition-all duration-300 z-40 hover:scale-110 focus:outline-none" aria-label="Back to top" title="Back to top">
+  <button id="back-to-top-btn" type="button" class="fixed bottom-6 right-6 p-2.5 rounded-full bg-white dark:bg-[#1e293b] border border-[#e2e8f0] dark:border-[#334155] hover:border-[#2563eb] shadow-xl opacity-0 pointer-events-none transition-all duration-300 z-40 hover:scale-110 focus:outline-none" aria-label="トップへ戻る" title="トップへ戻る">
     <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
       <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 10l7-7m0 0l7 7m-7-7v18"></path>
     </svg>
