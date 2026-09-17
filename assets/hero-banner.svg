@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 540" width="100%" height="100%">
+  <defs>
+    <linearGradient id="math-bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#030712" />
+      <stop offset="100%" stop-color="#0f172a" />
+    </linearGradient>
+    <linearGradient id="math-wave" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#38bdf8" />
+      <stop offset="100%" stop-color="#818cf8" />
+    </linearGradient>
+  </defs>
+  <rect width="960" height="540" fill="url(#math-bg)" rx="16"/>
+  <!-- Floating Precision Formulas & Geometry -->
+  <g opacity="0.3" stroke="#475569" stroke-width="1">
+    <circle cx="480" cy="270" r="180" fill="none" stroke-dasharray="6,6"/>
+    <circle cx="480" cy="270" r="120" fill="none"/>
+    <circle cx="480" cy="270" r="60" fill="none"/>
+  </g>
+  <!-- Dynamic Sine & Cosine Waves -->
+  <path d="M 80 270 Q 180 120, 280 270 T 480 270 T 680 270 T 880 270" fill="none" stroke="url(#math-wave)" stroke-width="4" opacity="0.8"/>
+  <path d="M 80 270 Q 180 420, 280 270 T 480 270 T 680 270 T 880 270" fill="none" stroke="#f43f5e" stroke-width="2.5" opacity="0.6"/>
+  <!-- Central Glass Floating Matrix -->
+  <rect x="260" y="160" width="440" height="220" rx="18" fill="#1e293b" fill-opacity="0.85" stroke="#475569" stroke-width="2"/>
+  <text x="300" y="220" fill="#94a3b8" font-family="monospace" font-size="16">PRECISION MATHEMATICAL ENGINE</text>
+  <text x="300" y="275" fill="#ffffff" font-family="system-ui, sans-serif" font-size="36" font-weight="800">f(x) = ∫ Σ √π • 10⁻¹⁶</text>
+  <text x="300" y="325" fill="#38bdf8" font-family="monospace" font-size="16">100% Client-Side BigInt • Exact Floating-Point</text>
+</svg>
