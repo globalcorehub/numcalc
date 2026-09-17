@@ -603,13 +603,15 @@
 <script>
 (() => {
   window.calcLoan = () => {
-    const P = parseFloat(document.getElementById('ln-p').value) || 0;
-    const r = (parseFloat(document.getElementById('ln-r').value) || 0) / 100 / 12;
-    const n = (parseFloat(document.getElementById('ln-t').value) || 0) * 12;
-    if (P <= 0 || n <= 0) return;
-    let m = r === 0 ? P / n : (P * (r * Math.pow(1 + r, n))) / (Math.pow(1 + r, n) - 1);
+    const P = parseFloat(document.getElementById('ln-p').value);
+    const r = (parseFloat(document.getElementById('ln-r').value)) / 100 / 12;
+    const n = (parseFloat(document.getElementById('ln-t').value)) * 12;
+    const clear = () => ['ln-out-pmt', 'ln-out-int', 'ln-out-tot'].forEach(id => { document.getElementById(id).textContent = '-'; });
+    if (![P, r, n].every(Number.isFinite) || P <= 0 || n <= 0 || r < 0) { clear(); return; }
+    const m = r === 0 ? P / n : P * r / -Math.expm1(-n * Math.log1p(r));
     const total = m * n;
     const totalInt = total - P;
+    if (![m, total, totalInt].every(Number.isFinite)) { clear(); return; }
     const fmt = (v) => '$' + v.toLocaleString(undefined, { minimumFractionDigits: 2, maximumFractionDigits: 2 });
     document.getElementById('ln-out-pmt').textContent = fmt(m);
     document.getElementById('ln-out-int').textContent = fmt(totalInt);

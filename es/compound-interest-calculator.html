@@ -604,17 +604,21 @@
 <script>
 (() => {
   window.calcCI = () => {
-    const P = parseFloat(document.getElementById('ci-p').value) || 0;
-    const PMT = parseFloat(document.getElementById('ci-pmt').value) || 0;
-    const r = (parseFloat(document.getElementById('ci-r').value) || 0) / 100;
-    const t = parseFloat(document.getElementById('ci-t').value) || 0;
+    const P = parseFloat(document.getElementById('ci-p').value);
+    const PMT = parseFloat(document.getElementById('ci-pmt').value);
+    const r = (parseFloat(document.getElementById('ci-r').value)) / 100;
+    const t = parseFloat(document.getElementById('ci-t').value);
+    const outputs = ['ci-out-contrib', 'ci-out-int', 'ci-out-fv'];
+    const clear = () => outputs.forEach(id => { document.getElementById(id).textContent = '-'; });
+    if (![P, PMT, r, t].every(Number.isFinite) || P < 0 || PMT < 0 || t < 0 || r <= -12) { clear(); return; }
     const n = 12;
     const totalContrib = P + (PMT * 12 * t);
     const i = r / n;
     const num = n * t;
-    let fv = P * Math.pow(1 + i, num);
-    if (i > 0) { fv += PMT * ((Math.pow(1 + i, num) - 1) / i); } else { fv += PMT * num; }
-    const totalInt = Math.max(0, fv - totalContrib);
+    const growth = Math.expm1(num * Math.log1p(i));
+    const fv = P * (1 + growth) + PMT * (i === 0 ? num : growth / i);
+    const totalInt = fv - totalContrib;
+    if (![fv, totalContrib, totalInt].every(Number.isFinite)) { clear(); return; }
     const fmt = (v) => '$' + v.toLocaleString(undefined, { minimumFractionDigits: 2, maximumFractionDigits: 2 });
     document.getElementById('ci-out-contrib').textContent = fmt(totalContrib);
     document.getElementById('ci-out-int').textContent = fmt(totalInt);
